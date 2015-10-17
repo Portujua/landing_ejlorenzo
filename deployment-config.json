@@ -1,0 +1,10 @@
+{
+    "type": "ftp",
+    "port": 21,
+    "host": "ftp.ejlorenzo.com.ve",
+    "username": "ejlorenz",
+    "password": "ed21115476",
+
+    "remotePath": "/public_html/",
+    "uploadOnSave": false
+}

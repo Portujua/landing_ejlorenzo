@@ -22,7 +22,7 @@ var Container = React.createClass({
 			backgroundSize: this.state.bgSize,
 			backgroundPosition: this.state.bgPosition,
 			backgroundRepeat: "no-repeat",
-			color: this.state.foreColor,			
+			color: this.state.foreColor,
 
 			width: '100vw',
 			height: this.props.height ? this.props.height : '100vh',
@@ -30,7 +30,7 @@ var Container = React.createClass({
 			textAlign: this.state.textAlign
 		};
 
-		return (			
+		return (
 			<div style={containerStyle} id={this.props.id}>
 				{this.props.children}
 			</div>

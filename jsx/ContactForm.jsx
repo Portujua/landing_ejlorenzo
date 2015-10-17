@@ -32,9 +32,9 @@ var ContactForm = React.createClass({
 				notificationColor: "#FE2E2E"
 			});
 
-			return;			
+			return;
 		}
-		
+
 		this.setState({
 			notification: "Enviando correo...",
 			notificationColor: "#31B404",
@@ -62,7 +62,7 @@ var ContactForm = React.createClass({
 			marginTop: "20px",
 			background: "repeating-linear-gradient(-45deg, #EFC1CB , #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px,#F2F2F2 70px, #F2F2F2 80px)",
 			borderRadius: "10px"
-		}
+		} 
 
 		return (
 			<div style={style}>
