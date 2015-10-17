@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Home</title>
 	<link rel="icon" type="image/png" href="img/logoSolo.png"/>
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> 
 
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 
