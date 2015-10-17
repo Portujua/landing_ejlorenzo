@@ -12,10 +12,10 @@ var NavbarButton = React.createClass({
 		}
 		else
 		{
-			$("body").css("background-image", "url(img/fondoMesa.jpg)");
+			$("body").css("background-image", "url(img/black-wood.jpg)");
 		}
 
-		
+
 
 	    $('#landing').animate({
 	        scrollTop: sto
@@ -35,7 +35,7 @@ var NavbarButton = React.createClass({
 			$("#navbar-element").css({
 				backgroundColor: "transparent",
 				color: "#aaa"
-			});					
+			});
 		}
 	},
 	render: function(){
@@ -48,7 +48,7 @@ var NavbarButton = React.createClass({
 
 		var self = this;
 
-		return (			
+		return (
 			<div style={style} onClick={this.scrollTo}>
 				{this.props.children}
 			</div>

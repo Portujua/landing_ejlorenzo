@@ -40,55 +40,10 @@
 
 	<script type="text/jsx">
 		React.render(<Landing />, document.getElementById('landing'));
-		React.render(<Navbar />, document.getElementById('navbar'));		
+		React.render(<Navbar />, document.getElementById('navbar'));
 	</script>
 
 	<script>
-		function addScrollbar()
-		{
-			$("#landing").perfectScrollbar({
-				useKeyboard: true,
-				useSelectionScroll: true
-			});
-
-			$(document).on('ps-scroll-y', function () {
-				var offset = parseInt($(".ps-scrollbar-y-rail").css("top"));
-				var height = parseInt($(".ps-scrollbar-y-rail").css("height"));
-				//console.log(offset)
-
-				if (offset >= 110)
-				{
-					$("#navbar-element").css({
-						backgroundColor: "#ddd",
-						color: "#111"
-					});
-				}
-				else
-				{
-					$("#navbar-element").css({
-						backgroundColor: "transparent",
-						color: "#aaa"
-					});					
-				}
-
-				// Parallax
-				// 650 pequeño, 800 el resto
-				if (offset < height)
-				{
-					$("body").css("background-image", "url(img/night-sky-stars-blur.jpg)");
-				}
-				else
-				{
-					$("body").css("background-image", "url(img/fondoMesa.jpg)");
-				}
-			})
-		}
-
-		setTimeout('addScrollbar()', 250);
-
-
-
-
 		<!--//--><![CDATA[//><!--
 			var images = new Array()
 			function preload() {
@@ -98,7 +53,7 @@
 				}
 			}
 			preload(
-				"http://ejlorenzo.com.ve/img/fondoMesa.jpg"
+				"http://ejlorenzo.com.ve/img/black-wood.jpg"
 			)
 		//--><!]]>
 	</script>

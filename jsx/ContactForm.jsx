@@ -56,13 +56,33 @@ var ContactForm = React.createClass({
 	        }
 	    });
 	},
+	getPlaceholdersText: function(){
+		var lang = getCookie("lang").length > 0 ? getCookie("lang") : "es";
+
+		if (lang == "es")
+			return {
+				label_name : "Nombre..",
+				label_email : "Correo..",
+				label_message : "Mensaje..",
+				label_submit : "ENVIAR"
+			}
+		else if (lang == "en")
+			return {
+				label_name : "Your name..",
+				label_email : "Your email..",
+				label_message : "Your message..",
+				label_submit : "SUBMIT"
+			}
+	},
 	render: function(){
+		var ph_text = this.getPlaceholdersText();
+
 		var style = {
 			padding: "10px 10px",
 			marginTop: "20px",
 			background: "repeating-linear-gradient(-45deg, #EFC1CB , #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px,#F2F2F2 70px, #F2F2F2 80px)",
 			borderRadius: "10px"
-		} 
+		}
 
 		return (
 			<div style={style}>
@@ -72,12 +92,12 @@ var ContactForm = React.createClass({
 				}}>
 					<div className="row">
 						<div className="col-sm-6" style={{marginBottom: "20px"}}>
-							<input type="text" id="name" name="name" placeholder="Nombre.." style={{
+							<input type="text" id="name" name="name" placeholder={ph_text.label_name} style={{
 								width: "100%"
 							}} />
 						</div>
 						<div className="col-sm-6" style={{marginBottom: "20px"}}>
-							<input type="text" id="email" name="email" placeholder="Correo.." style={{
+							<input type="text" id="email" name="email" placeholder={ph_text.label_email} style={{
 								width: "100%"
 							}} />
 						</div>
@@ -85,7 +105,7 @@ var ContactForm = React.createClass({
 
 					<div className="row">
 						<div className="col-sm-12" style={{marginBottom: "25px"}}>
-							<textarea id="message" name="message" placeholder="Mensaje.." style={{
+							<textarea id="message" name="message" placeholder={ph_text.label_message} style={{
 								width: "100%",
 								resize: "none"
 							}}></textarea>
@@ -94,7 +114,7 @@ var ContactForm = React.createClass({
 
 					<div className="row">
 						<div className="col-sm-12">
-							<button onClick={this.submitForm} disabled={!this.state.canSubmit}>enviar</button>
+							<button onClick={this.submitForm} disabled={!this.state.canSubmit}>{ph_text.label_submit}</button>
 							&nbsp;&nbsp;&nbsp;
 							{ this.state.notification &&
 								<span style={{color: this.state.notificationColor}}>{this.state.notification}</span>

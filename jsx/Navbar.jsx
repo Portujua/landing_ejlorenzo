@@ -8,6 +8,8 @@ var Navbar = React.createClass({
 		return $("#" + destination).offset().top - this.state.height;
 	},
 	render: function(){
+		var lang = getCookie("lang").length > 0 ? getCookie("lang") : "es";
+
 		var navbarStyle = {
 			height: this.state.height + "px",
 			width: "100vw",
@@ -22,7 +24,7 @@ var Navbar = React.createClass({
 
 		var self = this;
 
-		return (			
+		return (
 			<div id="navbar-element" style={navbarStyle}>
 				<NavbarButton scrollTo={this.getScrollToCoords('landing')} _float="left" fontSize="24px">
 					<span style={{
@@ -34,7 +36,7 @@ var Navbar = React.createClass({
 				</NavbarButton>
 
 				<NavbarButton scrollTo={this.getScrollToCoords('contacto')} _float="right">
-					Contacto
+					{ lang == "es" ? "Contacto" : "Contact" }
 				</NavbarButton>
 
 				<NavbarButton scrollTo={this.getScrollToCoords('cloud')} _float="right">
