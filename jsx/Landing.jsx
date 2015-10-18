@@ -5,7 +5,7 @@ var Landing = React.createClass({
 		if (lang == "es")
 			return {
 				my_name : "Eduardo Lorenzo",
-				profession : "Programador Junior",
+				profession : "Programador",
 				knowledge_title : "Con conocimientos en:",
 				my_knowledge : "Desarrollo Web (HTML, HTML5, CSS, CSS3, LESS, Bootstrap, PHP, JavaScript, jQuery, AngularJS, ReactJS, JSX, AJAX), Bases de Datos (MySQL, Postgresql, ORACLE), Desarrollo de Aplicaciones (C#, C++, Pascal, Python, Java), Redes Neuronales, Algoritmos Genéticos, Redes",
 
@@ -17,7 +17,7 @@ var Landing = React.createClass({
 		else if (lang == "en")
 			return {
 				my_name : "Eduardo Lorenzo",
-				profession : "Junior Programmer",
+				profession : "Software Developer",
 				knowledge_title : "Experienced in:",
 				my_knowledge : "Web development (HTML, HTML5, CSS, CSS3, LESS, Bootstrap, PHP, JavaScript, jQuery, AngularJS, ReactJS, JSX, AJAX), Databases (MySQL, Postgresql, ORACLE), App development (C#, C++, Pascal, Python, Java), Neural networks, Genetic algorithms, Networks",
 
